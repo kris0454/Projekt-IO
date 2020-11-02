@@ -1,0 +1,9 @@
+C:\Users\Piotrek\Desktop\STUDIA\semestr5\Inżynieria oprogramowania\repos\TCP server\ClassLibrary\bin\Debug\netstandard2.0\ClassLibrary.deps.json
+C:\Users\Piotrek\Desktop\STUDIA\semestr5\Inżynieria oprogramowania\repos\TCP server\ClassLibrary\bin\Debug\netstandard2.0\ClassLibrary.dll
+C:\Users\Piotrek\Desktop\STUDIA\semestr5\Inżynieria oprogramowania\repos\TCP server\ClassLibrary\bin\Debug\netstandard2.0\ClassLibrary.pdb
+C:\Users\Piotrek\Desktop\STUDIA\semestr5\Inżynieria oprogramowania\repos\TCP server\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.csprojAssemblyReference.cache
+C:\Users\Piotrek\Desktop\STUDIA\semestr5\Inżynieria oprogramowania\repos\TCP server\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.AssemblyInfoInputs.cache
+C:\Users\Piotrek\Desktop\STUDIA\semestr5\Inżynieria oprogramowania\repos\TCP server\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.AssemblyInfo.cs
+C:\Users\Piotrek\Desktop\STUDIA\semestr5\Inżynieria oprogramowania\repos\TCP server\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Piotrek\Desktop\STUDIA\semestr5\Inżynieria oprogramowania\repos\TCP server\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.dll
+C:\Users\Piotrek\Desktop\STUDIA\semestr5\Inżynieria oprogramowania\repos\TCP server\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.pdb
