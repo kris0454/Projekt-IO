@@ -69,8 +69,6 @@ namespace ClassLibrary
         }
         protected void BeginDataTransmission(NetworkStream stream)
         {
-            
-
             while (true)
             {                
                 byte[] buffer = new byte[1024];
@@ -82,11 +80,7 @@ namespace ClassLibrary
                 }
                 if (word == "quit")
                     break;
-                if(!CheckIfPalindrome(word))
-                    Console.WriteLine("not a palindrom, type next input");
-
-            }
-            
+            }            
         }
         private void TransmissionCallback(IAsyncResult ar)
         {
