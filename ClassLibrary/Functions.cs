@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System.IO;
+
+
 
 namespace ClassLibrary
 {
@@ -38,6 +41,34 @@ namespace ClassLibrary
                 }
             }
             return false;
+        }
+
+        public bool LogIn(String login, String haslo)
+        {            
+            List<string> users = new List<string>();
+            List<string> pass = new List<string>();
+
+            StreamReader streamReader = new StreamReader("C:\\Users\\Piotrek\\Desktop\\STUDIA\\semestr5\\Inżynieria oprogramowania\\repos\\TCP server\\TCP server\\vars.txt");
+            string line = "";
+            while ((line = streamReader.ReadLine()) != null)
+            {
+                string[] components = line.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                users.Add(components[0]);
+                pass.Add(components[1]);
+            }
+            streamReader.Close();
+            
+            if (users.Contains(login) && pass.Contains(haslo) &&
+                    Array.IndexOf(users.ToArray(), login) == Array.IndexOf(pass.ToArray(), haslo))
+            {
+                Console.WriteLine("Zalogowano");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Zly Login lub haslo!");
+                return false;
+            }
         }
 
 
