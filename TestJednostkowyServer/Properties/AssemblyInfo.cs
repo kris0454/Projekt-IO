@@ -2,18 +2,18 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("TestJednostkowySerwer")]
+[assembly: AssemblyTitle("TestJednostkowyServer")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TestJednostkowySerwer")]
+[assembly: AssemblyProduct("TestJednostkowyServer")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
 
-[assembly: Guid("2b9075c9-a844-4e41-a777-338a4beaacc1")]
+[assembly: Guid("8c356c82-7e0b-4b32-ba81-27cb4fd710f7")]
 
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
