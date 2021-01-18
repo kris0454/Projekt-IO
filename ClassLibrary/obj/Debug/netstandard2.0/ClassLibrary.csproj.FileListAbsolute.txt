@@ -7,3 +7,12 @@ C:\Users\Piotrek\Desktop\STUDIA\semestr5\Inżynieria oprogramowania\repos\TCP se
 C:\Users\Piotrek\Desktop\STUDIA\semestr5\Inżynieria oprogramowania\repos\TCP server\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Piotrek\Desktop\STUDIA\semestr5\Inżynieria oprogramowania\repos\TCP server\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.dll
 C:\Users\Piotrek\Desktop\STUDIA\semestr5\Inżynieria oprogramowania\repos\TCP server\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.pdb
+D:\Studia\visual\Nowy folder (2)\ClassLibrary\bin\Debug\netstandard2.0\ClassLibrary.deps.json
+D:\Studia\visual\Nowy folder (2)\ClassLibrary\bin\Debug\netstandard2.0\ClassLibrary.dll
+D:\Studia\visual\Nowy folder (2)\ClassLibrary\bin\Debug\netstandard2.0\ClassLibrary.pdb
+D:\Studia\visual\Nowy folder (2)\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.csprojAssemblyReference.cache
+D:\Studia\visual\Nowy folder (2)\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.AssemblyInfoInputs.cache
+D:\Studia\visual\Nowy folder (2)\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.AssemblyInfo.cs
+D:\Studia\visual\Nowy folder (2)\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.csproj.CoreCompileInputs.cache
+D:\Studia\visual\Nowy folder (2)\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.dll
+D:\Studia\visual\Nowy folder (2)\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.pdb

@@ -4,6 +4,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.IO;
 using System.Threading;
+using System.Collections;
 
 namespace ClassLibrary
 {
@@ -35,13 +36,29 @@ namespace ClassLibrary
                     writer.WriteLine("Bledne haslo lub uzytkownik");
                 }
             } while (!logged);
-            
+
 
             while (logged)
             {
-                writer.WriteLine("Jeśli chcesz sprawdzić czy słowo jest palindromem wpisz a, zeby sprawdzić czy słowo jest anagramem wpisz b");
+                writer.WriteLine("Podaj swoje litery");
                 String choice = reader.ReadLine();
+                if (choice == "logout")
+                {
+                    writer.WriteLine("Zegnam");
+                    Thread.Sleep(2000);
+                    logged = false;
+                }
+                else
+                {
+                    ArrayList list = functions.findPossibleWords(choice);
+                    list.Sort(Functions.sortVal());
+                    foreach (Functions.Word w in list)
+                    {
+                        writer.WriteLine(w._word + ": " + w._val);
+                    }
+                }
 
+                /*
                 if (choice == "a")
                 {
                     writer.WriteLine("podaj słowo");
@@ -81,7 +98,7 @@ namespace ClassLibrary
                     writer.WriteLine("Zegnam");
                     Thread.Sleep(2000);
                     logged = false;
-                }
+                }*/
             }
         }
     }
