@@ -47,7 +47,7 @@ namespace ClassLibrary
             List<string> users = new List<string>();
             List<string> pass = new List<string>();
 
-            StreamReader streamReader = new StreamReader("C:\\Users\\Piotrek\\Desktop\\STUDIA\\semestr5\\Inżynieria oprogramowania\\repos\\TCP server\\TCP server\\vars.txt");
+            StreamReader streamReader = new StreamReader("D:\\Studia\\visual\\Nowy folder (2)\\TCP server\\vars.txt");
             string line = "";
             while ((line = streamReader.ReadLine()) != null)
             {
@@ -162,7 +162,7 @@ namespace ClassLibrary
 
         public ArrayList findPossibleWords(String letters)
         {
-            StreamReader streamReader = new StreamReader("C:\\Users\\Piotrek\\Desktop\\STUDIA\\semestr5\\Inżynieria oprogramowania\\scrabble\\slowa.txt");
+            StreamReader streamReader = new StreamReader("D:\\Studia\\visual\\Nowy folder (2)\\TCP server\\slowa.txt");
             char[] alfabet = { 'a', 'ą', 'b', 'c', 'ć', 'd', 'e', 'ę', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'r', 's', 'ś', 't', 'u', 'w', 'y', 'z', 'ź', 'ż', '.' };
             ArrayList list = new ArrayList();
 

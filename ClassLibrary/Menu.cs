@@ -17,45 +17,53 @@ namespace ClassLibrary
             StreamWriter writer = new StreamWriter(stream);
             writer.AutoFlush = true;
             StreamReader reader = new StreamReader(stream);
-
             do
             {
-                writer.WriteLine("Podaj nazwe uzytkownika");
                 //writer.Flush();
-                String user = reader.ReadLine();
-
-                writer.WriteLine("Podaj haslo");
-                String password = reader.ReadLine();
+                string temp = reader.ReadLine();
+                int position = temp.IndexOf(";");
+                String user = temp.Substring(0,position);
+                Console.WriteLine("user: " + user);
+                String password = temp.Substring(position + 1);
+                Console.WriteLine("pass: " + password);
 
                 if (functions.LogIn(user, password))
                 {
                     logged = true;
+                    writer.WriteLine("1");
                 }
                 else
                 {
-                    writer.WriteLine("Bledne haslo lub uzytkownik");
+                    writer.WriteLine("0");
                 }
             } while (!logged);
 
 
             while (logged)
             {
-                writer.WriteLine("Podaj swoje litery");
                 String choice = reader.ReadLine();
                 if (choice == "logout")
                 {
-                    writer.WriteLine("Zegnam");
+                    Console.WriteLine("Logout");
+                    //writer.WriteLine("Zegnam");
                     Thread.Sleep(2000);
                     logged = false;
                 }
                 else
                 {
-                    ArrayList list = functions.findPossibleWords(choice);
+                    string temp = choice.Replace(", ", "");
+                    Console.WriteLine(temp);
+                    ArrayList list = functions.findPossibleWords(temp);
+                    Console.WriteLine("test");
                     list.Sort(Functions.sortVal());
+                    Console.WriteLine("test");
+                    int i = 0;
                     foreach (Functions.Word w in list)
                     {
+                        Console.WriteLine(i++);
                         writer.WriteLine(w._word + ": " + w._val);
                     }
+                    writer.WriteLine("-");
                 }
 
                 /*
