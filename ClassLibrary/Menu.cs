@@ -17,26 +17,52 @@ namespace ClassLibrary
             StreamWriter writer = new StreamWriter(stream);
             writer.AutoFlush = true;
             StreamReader reader = new StreamReader(stream);
-            do
+            string xxx = reader.ReadLine();
+            if (xxx == "0")
             {
-                //writer.Flush();
-                string temp = reader.ReadLine();
-                int position = temp.IndexOf(";");
-                String user = temp.Substring(0,position);
-                Console.WriteLine("user: " + user);
-                String password = temp.Substring(position + 1);
-                Console.WriteLine("pass: " + password);
+                do
+                {
+                    //writer.Flush();
+                    string temp = reader.ReadLine();
+                    int position = temp.IndexOf(";");
+                    String user = temp.Substring(0, position);
+                    Console.WriteLine("user: " + user);
+                    String password = temp.Substring(position + 1);
+                    Console.WriteLine("pass: " + password);
 
-                if (functions.LogIn(user, password))
+                    if (functions.LogIn(user, password))
+                    {
+                        logged = true;
+                        writer.WriteLine("1");
+                    }
+                    else
+                    {
+                        writer.WriteLine("0");
+                    }
+                } while (!logged);
+            }else if(xxx == "1")
+            {
+                do
                 {
-                    logged = true;
-                    writer.WriteLine("1");
-                }
-                else
-                {
-                    writer.WriteLine("0");
-                }
-            } while (!logged);
+                    string temp = reader.ReadLine();
+                    int position = temp.IndexOf(";");
+                    String user = temp.Substring(0, position);
+                    Console.WriteLine("user: " + user);
+                    String password = temp.Substring(position + 1);
+                    Console.WriteLine("pass: " + password);
+
+                    if (functions.CreateAccount(user, password) == false)
+                    {
+                        logged = true;
+                        writer.WriteLine("1");
+                    }
+                    else
+                    {
+                        writer.WriteLine("0");
+                    }
+                } while (!logged);
+
+            }
 
 
             while (logged)
@@ -61,7 +87,13 @@ namespace ClassLibrary
                     foreach (Functions.Word w in list)
                     {
                         Console.WriteLine(i++);
-                        writer.WriteLine(w._word + ": " + w._val);
+                        writer.WriteLine(w._word);
+                    }
+                    writer.WriteLine("-");
+                    foreach (Functions.Word w in list)
+                    {
+                        Console.WriteLine(i++);
+                        writer.WriteLine(w._val);
                     }
                     writer.WriteLine("-");
                 }

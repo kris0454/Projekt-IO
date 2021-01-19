@@ -41,7 +41,36 @@ namespace ClassLibrary
             }
             return false;
         }
+        public bool CreateAccount(String login,String haslo)
+        {
+            List<string> users = new List<string>();
+            List<string> pass = new List<string>();
+            StreamReader streamReader = new StreamReader("D:\\Studia\\visual\\Nowy folder (2)\\TCP server\\vars.txt");
+            string line = "";
+            while ((line = streamReader.ReadLine()) != null)
+            {
+                string[] components = line.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                users.Add(components[0]);
+                pass.Add(components[1]);
+            }
+            streamReader.Close();
 
+            if (users.Contains(login) &&
+                    Array.IndexOf(users.ToArray(), login) == Array.IndexOf(pass.ToArray(), haslo))
+            {
+                Console.WriteLine("Konto juz istnieje");
+                return true;
+            }
+            else
+            {
+                //nie chce działać dopisanie do pliku
+                StreamWriter writer = new StreamWriter("D:\\Studia\\visual\\Nowy folder (2)\\TCP server\\vars.txt",true);
+                string temp = login + " " + haslo;
+                writer.WriteLine(temp);
+                Console.WriteLine("Konto utworzone");
+                return false;
+            }
+        }
         public bool LogIn(String login, String haslo)
         {
             List<string> users = new List<string>();
